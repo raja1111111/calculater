@@ -1,25 +1,61 @@
-import logo from './logo.svg';
-import './App.css';
+import logo from "./logo.svg";
+import "./App.css";
+import { Component } from "react";
+import Login from "./Pages/Login";
+import Header from "./Components/Header";
+import Footer from "./Components/Footer";
 
-function App() {
+import Wrappe from "./Components/Wrappe";
+
+export default function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Header />
+      <Wrappe />
+
+      <Footer />
     </div>
   );
 }
 
-export default App;
+// class App extends Component {
+//   state = {
+//     counter: 0,
+//     //  intId: null,
+//   };
+
+//   stop = () => {
+//     clearInterval(this.intId);
+//   };
+//   // incr = () => {
+//   //   this.setState(({ counter }) => ({ counter: counter + 1 }));
+//   // };
+//   componentDidMount() {
+//     setInterval(() => {
+//       this.intId = this.setState(({ counter }) => ({ counter: counter + 1 }));
+//     }, 1000);
+//   }
+//   render() {
+//     const { counter } = this.state;
+//     return (
+//       <div style={{ margin: 40 }}>
+//         <Login />
+//         {/* {counter}
+//         <button onClick={this.stop}>+</button> */}
+//       </div>
+//     );
+//   }
+// }
+
+// class Counter extends Component {
+//   render() {
+//     const { counter, incr, name, color } = this.props;
+//     return (
+//       <>
+//         <h1></h1>
+//       </>
+//     );
+//   }
+// }
+
+//export default App;
